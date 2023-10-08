@@ -1,0 +1,74 @@
+/* ButtonContainer.css */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between buttons */
+    margin-bottom: 20px; /* space below the button group */
+}
+
+.button-container button {
+    padding: 10px 20px; /* vertical and horizontal padding */
+    font-size: 16px; /* text size */
+    cursor: pointer; /* pointer on hover for better UX */
+    border: none; /* remove default borders */
+    border-radius: 5px; /* rounded corners */
+    transition: background-color 0.3s ease; /* smooth transition for hover effects */
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button.start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.stop {
+    background-color: #E74C3C;
+    color: white;
+}
+
+button.reset {
+    background-color: #A4A4A4;
+    color: white;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #2C5364, #203A43, #0F2027);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-out;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
