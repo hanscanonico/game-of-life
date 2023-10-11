@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     gap: 20px; /* space between buttons */
-    margin-bottom: 20px; /* space below the button group */
+    z-index: 900;
 }
 
 .button-container button {
@@ -59,11 +59,12 @@ h1 {
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin: 5px 0;
     opacity: 0;
     transform: translateY(-20px);
     transition: all 0.5s ease-out;
     animation: fadeIn 1s forwards 0.5s;
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -71,4 +72,38 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* Gap between items, adjust as necessary */
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.input-container span {
+    font-size: 16px; 
+    font-weight: 500; /* You can adjust as per requirement */
+    color: #333;
+}
+
+.input-container input[type="text"] {
+    width: 50px; /* You can adjust based on your needs */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-container input[type="text"]:focus {
+    border-color: #0077cc; /* A highlight color when focused, can be changed based on preference */
+    outline: none;
 }
